@@ -11,23 +11,27 @@ const Home = () => {
     return (
 
         <div className="Home" >
-            <Navbar className="navbar navbar-expand-lg navbar-light bg-light">
-                <Container>
+            <div style={{ backgroundColor: "rgb(0 0 0)" }}>
+                <Navbar >
+                    <Container>
 
-                    <button className="btn btn-outline-primary" onClick={() => navigate("/")}>
-                        Logout<i className="bi bi-lock-fill"></i>
-                    </button>
-
-
-                    <button className="btn btn-outline-primary" onClick={() => navigate("/profile")}>
-                        Profile  <i className="bi bi-person-square"></i>
-                    </button>
+                        <button className="btn btn-primary" onClick={() => navigate("/")}>
+                            Logout<i className="bi bi-lock-fill"></i>
+                        </button>
 
 
+                        <button className="btn btn-primary" onClick={() => navigate("/profile")}>
+                            Profile  <i className="bi bi-person-square"></i>
+                        </button>
 
-                </Container>
-            </Navbar>
-            <hr />
+
+
+                    </Container>
+                </Navbar>
+                <hr />
+            </div>
+
+
             <h1><i className="bi bi-house-heart"></i></h1>
             <h2>You are at Homepage.</h2>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -62,7 +66,7 @@ const Home = () => {
                             <div className="card-body">
                                 <h5 className="card-title">Group Chat</h5>
                                 <i className="bi bi-people-fill" style={{ fontSize: "100px" }} ></i> <br />
-                                <button className="btn btn-primary">Group Chat</button>
+                                <button className="btn btn-primary" onClick={() => navigate("/groupChat")} >Group Chat</button>
                             </div>
                         </div>
                     </div>

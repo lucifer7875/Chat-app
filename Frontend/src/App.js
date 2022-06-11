@@ -4,6 +4,7 @@ import Home from './components/Home/home';
 import Login from './components/Login/login';
 import Register from './components/Register/register';
 import PersonalChat from './components/PersonalChat/personalChat';
+import GroupChat from './components/GroupChat/groupChat';
 import WithNavigate from './components/Profile/profile';
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -33,6 +34,7 @@ function App() {
           <Route path='/register' element={<Register />}></Route>
           <Route path='/profile' element={<WithNavigate />}></Route>
           <Route path='/personalChat' element={<PersonalChat />}></Route>
+          <Route path='/groupChat' element={<GroupChat />}></Route>
 
         </Routes>
       </Router>

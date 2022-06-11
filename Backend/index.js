@@ -90,6 +90,19 @@ app.get("/profile/:id", async (req, res) => {
     console.log("server request ends here")
 })
 
+// PersonalChat get user route
+
+app.get("/personalchat", async (req, res) => {
+    // console.log("showing data")
+    console.log(req.params.id)
+    console.log("got a request")
+
+    const data = await User.find({}, '-_id userName')
+    console.log(data)
+    res.send(data)
+    console.log("server request ends here")
+})
+
 
 app.listen(9002, () => {
     console.log("BE started at port 9002")
